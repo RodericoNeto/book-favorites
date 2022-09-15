@@ -8,29 +8,22 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <>
+    <main>
       <BrowserRouter>
-        <nav>
-          <ul>
-            <li>
-              <Link to='/'>Home</Link>
-            </li>
-            <li>
-              <Link to='/login'>Login</Link>
-            </li>
-          </ul>
+        <nav className='navvbar'>
+          <Link to='/'>Home</Link>
+          <Link to='/login'>Login</Link>
         </nav>
 
-        <h1>Book Favorites</h1>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
-          <Route path="*" element={<h1>Não tem essa página :(</h1>} />
+          <Route path="*" element={<h1>Não temos essa página :(</h1>} />
         </Routes>
       </BrowserRouter>
 
       <Footer />
-    </>
+    </main>
   );
 }
 
